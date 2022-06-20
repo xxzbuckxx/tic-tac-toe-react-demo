@@ -4,12 +4,21 @@
   background-color: #fff;
   padding: 50px;
   border-radius: 25px;
-  border: 5px solid #ddd;
-  height: 40vh
+  height: 40vh;
+  box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+  align-items: center;
 }
 
 ol, ul {
   padding-left: 30px;
+}
+
+li {
+  padding-top: 5px;
+}
+/* Tic Tac Toe Board */
+.board {
+  padding: 50px;
 }
 
 .board-row:after {
@@ -18,23 +27,19 @@ ol, ul {
   display: table;
 }
 
-.status {
-  margin-bottom: 10px;
-}
-
 .square {
   background: #fff;
   border: 2px solid #ddd;
   float: left;
-  font-size: 24px;
+  font-size: 44px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 64px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 64px;
 }
 
 .square:focus {
@@ -45,6 +50,12 @@ ol, ul {
   background: #ddd;
 }
 
+/* Info */
 .game-info {
-  margin-left: 20px;
+  height: inherit;
+  width: 30ex;
+}
+
+.game-info h2 {
+  text-align: center;
 }

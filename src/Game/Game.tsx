@@ -59,7 +59,7 @@ export default function Game() {
         />
       </div>
       <div className="game-info">
-        <div>{status}</div>
+        <h2>{status}</h2>
         <ol>{moves}</ol>
       </div>
     </div>

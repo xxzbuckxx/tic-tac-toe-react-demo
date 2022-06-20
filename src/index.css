@@ -5,9 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font: 14px "Century Gothic", Futura, sans-serif;
+  background: linear-gradient(to right, #88CCF1, #2D898B);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  color: #fff;
+  font-size: 2.5rem;
 }
