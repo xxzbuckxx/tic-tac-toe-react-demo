@@ -3,7 +3,6 @@ import Board from './Board'
 import { useState } from 'react'
 import './Game.css'
 
-
 export default function Game() {
 
   const [history, setHistory] = useState([{squares: Array(9).fill('')}])
@@ -22,7 +21,7 @@ export default function Game() {
     squares[i] = xIsNext ? 'X' : 'O'
     setHistory(history.concat([{squares: squares}]))
     setStepNumber(history.length)
-    setXIsNext(!xIsNext);
+    setXIsNext(!xIsNext)
   }
 
   function jumpTo(step: number) {
@@ -32,10 +31,11 @@ export default function Game() {
     setXIsNext((step % 2) === 0)
   }
 
+  // Inefficent? redifining component on every render
   const moves = history.map((step, move) => {
     const desc = move ?
       'Go to move #' + move :
-      'Go to game start';
+      'Go to game start'
     return (
       <li key={move}>
         <button onClick={() => jumpTo(move)}>{desc}</button>
@@ -67,6 +67,7 @@ export default function Game() {
 }
 
 function calculateWinner(squares: Array<string>) {
+
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -77,11 +78,13 @@ function calculateWinner(squares: Array<string>) {
     [0, 4, 8],
     [2, 4, 6],
   ];
+
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
     }
   }
+
   return null;
 }

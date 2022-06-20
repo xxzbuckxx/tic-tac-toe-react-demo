@@ -4,7 +4,7 @@
   background-color: #fff;
   padding: 50px;
   border-radius: 25px;
-  height: 40vh;
+  height: 60vh;
   box-shadow: 0 15px 15px rgba(0,0,0,0.1);
   align-items: center;
 }
@@ -54,8 +54,21 @@ li {
 .game-info {
   height: inherit;
   width: 30ex;
+  text-align: center;
 }
 
 .game-info h2 {
-  text-align: center;
+  text-align: left;
+}
+
+.game-info ol {
+  /* list-style-type: none; */
+}
+
+.game-info button {
+  /* margin-left: 20px; */
+  border: 3px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
 }
