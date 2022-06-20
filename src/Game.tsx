@@ -7,9 +7,6 @@ type SquareProps = {
 }
 
 function Square(props: SquareProps) {
-
-  // const [value, setValue] = useState(props.value);
-
   return (
     <button
       className="square"
@@ -61,11 +58,10 @@ export default function Game() {
 
   const [history, setHistory] = useState([{squares: Array(9).fill('')}])
   const [xIsNext, setXIsNext] = useState(true)
-  const [stepNUmber, setStepNumber] = useState(0)
+  const [stepNumber, setStepNumber] = useState(0)
 
-  const current = history[history.length - 1];
+  const current = history[stepNumber];
   const winner = calculateWinner(current.squares);
-
   
   function handleClick(i: number) {
     const squares = current.squares.slice()
@@ -75,10 +71,13 @@ export default function Game() {
 
     squares[i] = xIsNext ? 'X' : 'O'
     setHistory(history.concat([{squares: squares}]))
+    setStepNumber(history.length)
     setXIsNext(!xIsNext);
   }
 
   function jumpTo(step: number) {
+    console.log("Jumping to move", step)
+    setHistory(history.slice(0, step + 1))
     setStepNumber(step)
     setXIsNext((step % 2) === 0)
   }
