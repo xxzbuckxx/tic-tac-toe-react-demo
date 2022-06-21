@@ -57,6 +57,7 @@ li {
   height: inherit;
   width: 30ex;
   text-align: center;
+  overflow: scroll;
 }
 
 .game-info h2 {
