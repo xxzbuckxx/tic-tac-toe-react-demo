@@ -2,6 +2,8 @@
 
 A Tic-Tac-Toe game with a rewindable timeline.
 
+Play the demo [here](https://xxzbuckxx.github.io/tic-tac-toe-react-demo/).
+
 ---
 ### TODO:
 
