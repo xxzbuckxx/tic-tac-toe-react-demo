@@ -15,7 +15,6 @@ function renderSquare(props: BoardProps, i: number) {
 }
 
 function Board(props: BoardProps) {
-
   return (
     <div className="board">
       <div className="board-row">

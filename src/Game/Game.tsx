@@ -1,6 +1,7 @@
+import { useState } from 'react'
 import Square from './Square'
 import Board from './Board'
-import { useState } from 'react'
+import ReactConfetti from 'react-confetti'
 import './Game.css'
 
 export default function Game() {
@@ -25,13 +26,11 @@ export default function Game() {
   }
 
   function jumpTo(step: number) {
-    console.log("Jumping to move", step)
     setHistory(history.slice(0, step + 1))
     setStepNumber(step)
     setXIsNext((step % 2) === 0)
   }
 
-  // Inefficent? redifining component on every render
   const moves = history.map((step, move) => {
     const desc = move ?
       'Go to move #' + move :
@@ -52,6 +51,7 @@ export default function Game() {
 
   return (
     <div className="game">
+    <ReactConfetti />
       <div className="game-board">
         <Board 
           squares={current.squares} 

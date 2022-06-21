@@ -1,3 +1,5 @@
+
+
 .game {
   display: flex;
   flex-direction: row;
@@ -61,12 +63,7 @@ li {
   text-align: left;
 }
 
-.game-info ol {
-  /* list-style-type: none; */
-}
-
 .game-info button {
-  /* margin-left: 20px; */
   border: 3px solid gray;
   border-radius: 10px;
   padding: 10px;
