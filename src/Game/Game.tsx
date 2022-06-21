@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Square from './Square'
 import Board from './Board'
-import ReactConfetti from 'react-confetti'
 import './Game.css'
 
 export default function Game() {
@@ -51,7 +50,6 @@ export default function Game() {
 
   return (
     <div className="game">
-    <ReactConfetti />
       <div className="game-board">
         <Board 
           squares={current.squares} 
